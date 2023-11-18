@@ -1,27 +1,50 @@
 # Blog
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.1.
+This project is Monorepo to host Admin dashboard and Client side of my personal website.
 
-## Development server
+Both apps were written with [Angular v17][angular-v17], within one workspace. Client side also will use SSR.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+As backend service were chosen [PocketBase](pocketbase).
 
-## Code scaffolding
+# Project Structure (brief)
+```
+📁 projects
+├── 📁 admin-dashboard              # Application which stands for Admin interface
+│   └── 📁 src                      
+│       ├── 📁 app                  
+│       │   ├── 📁 core             # Reusable or non-related to any domain parts of application, e.g., header, layouts, cards, etc.
+│       │   ├── 📁 posts            # Posts Domain, handles Crud operations over blog posts
+│       │   └── 📁 pages            # Pages Domain, same as posts, but for other website pages (it's *not* application routes)
+│       └── 📁...                   # Other default files
+│
+├── 📁 admin-dashboard              # Application which stands for Client part
+│   └── 📁 src                      
+│       ├── 📁 app                  
+│       └── TODO
+│
+└── 📁 api                          # Shared library to interact with PocketBase api and possible to share design system and components
+    └── 📁 src                      
+        ├── 📁 lib                  # Where all modules placed
+        │   ├── 📁 core             # Core features + PocketBase service
+        │   └── 📁 post             # Domain logic for Post entity
+        └── 📄 public-api.ts        # Globally exported
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```
 
-## Build
+# Local development
+## Prerequesites
+1. NodeJS Iron (20 LTS)
+2. PocketBase instance running locally on port 8090. [Guide](https://pocketbase.io/docs/)
+3. Angular CLI v17.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+```bash
+git clone git@github.com:ilsrbn/blog.git
+cd ./blog
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+npm ci
+ng serve admin-dashboard
+```
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+[angular-v17]: https://angular.dev/
+[pocketbase]: https://pocketbase.io/
