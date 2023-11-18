@@ -1,0 +1,13 @@
+<button *ngIf="tag === 'button'" [ngClass]="classes">
+  <span *ngIf="iconName" class="material-symbols-sharp"> {{ iconName }} </span>
+  <span> {{ text }} </span>
+</button>
+<a
+  *ngIf="tag === 'a'"
+  [ngClass]="classes"
+  [routerLink]="to"
+  [routerLinkActive]="routeable ? 'active' : ''"
+>
+  <span *ngIf="iconName" class="material-symbols-sharp"> {{ iconName }} </span>
+  <span> {{ text }} </span>
+</a>

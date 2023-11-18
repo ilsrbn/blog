@@ -1,0 +1,122 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin, padding
+  */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+    5. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+    6. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+    7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+// small {
+//   opacity: 0.8;
+// }
+
+/*
+    8. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
+body {
+  font-family: "Roboto Slab", serif;
+  background-color: var(--color-bg);
+  color: var(--color-primary);
+}
+
+:root {
+  --padding-small: 12px;
+  --padding-medium: 20px;
+
+  --font-base: "Roboto Slab", serif;
+  --logo-size-small: 36px;
+  --logo-size-medium: 56px;
+
+  --font-size-small: 12px;
+  --font-size-medium: 24px;
+  --font-size-large: 36px;
+
+  --color-primary: #1d1d02;
+  --color-semi-primary: #494930;
+  --color-neutral: #7a7a5e;
+  --color-semi-bg: #b0b090;
+  --color-bg: #e8e8c6;
+
+  --color-primary-25: rgba(var(--color-primary), 0.25);
+  --color-primary-50: rgba(var(--color-primary), 0.5);
+  --color-primary-75: rgba(var(--color-primary), 0.75);
+
+  --color-bg-25: rgba($color: var(--color-bg), $alpha: 0.25);
+  --color-bg-50: rgba($color: var(--color-bg), $alpha: 0.5);
+  --color-bg-75: rgba($color: var(--color-bg), $alpha: 0.75);
+}
+body.dark {
+  --color-primary: #e8e8c6;
+  --color-semi-primary: #b0b090;
+  --color-neutral: #7a7a5e;
+  --color-semi-bg: #494930;
+  --color-bg: #1d1d02;
+}

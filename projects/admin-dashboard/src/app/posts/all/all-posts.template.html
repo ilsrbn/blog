@@ -1,0 +1,101 @@
+<dashboard-toolbar>
+  <div class="toolbar__items">
+    <app-input class="toolbar__items-search" placeholder="Search..." />
+    <app-button
+      tag="a"
+      to="/dashboard/posts/create"
+      text="Create"
+      iconName="add"
+      [bordered]="false"
+    ></app-button>
+  </div>
+</dashboard-toolbar>
+@if (posts$ | async; as posts) {
+<app-grid>
+  @for (post of posts.items; track post.id) {
+  <post-card
+    [title]="post.title"
+    [description]="post.content_preview"
+    [slug]="post.slug"
+    [date]="post.created"
+    [image]="post.preview"
+    [status]="post.status"
+    domain="posts"
+  ></post-card>
+  <post-card
+    [title]="post.title"
+    [description]="post.content_preview"
+    [slug]="post.slug"
+    [date]="post.created"
+    [image]="post.preview"
+    [status]="post.status"
+    domain="posts"
+  ></post-card>
+  <post-card
+    [title]="post.title"
+    [description]="post.content_preview"
+    [slug]="post.slug"
+    [date]="post.created"
+    [image]="post.preview"
+    [status]="post.status"
+    domain="posts"
+  ></post-card>
+  <post-card
+    [title]="post.title"
+    [description]="post.content_preview"
+    [slug]="post.slug"
+    [date]="post.created"
+    [image]="post.preview"
+    [status]="post.status"
+    domain="posts"
+  ></post-card>
+  <post-card
+    [title]="post.title"
+    [description]="post.content_preview"
+    [slug]="post.slug"
+    [date]="post.created"
+    [image]="post.preview"
+    [status]="post.status"
+    domain="posts"
+  ></post-card>
+  <post-card
+    [title]="post.title"
+    [description]="post.content_preview"
+    [slug]="post.slug"
+    [date]="post.created"
+    [image]="post.preview"
+    [status]="post.status"
+    domain="posts"
+  ></post-card>
+  <post-card
+    [title]="post.title"
+    [description]="post.content_preview"
+    [slug]="post.slug"
+    [date]="post.created"
+    [image]="post.preview"
+    [status]="post.status"
+    domain="posts"
+  ></post-card>
+  <post-card
+    [title]="post.title"
+    [description]="post.content_preview"
+    [slug]="post.slug"
+    [date]="post.created"
+    [image]="post.preview"
+    [status]="post.status"
+    domain="posts"
+  ></post-card>
+  <post-card
+    [title]="post.title"
+    [description]="post.content_preview"
+    [slug]="post.slug"
+    [date]="post.created"
+    [image]="post.preview"
+    [status]="post.status"
+    domain="posts"
+  ></post-card>
+
+  }
+</app-grid>
+
+}
