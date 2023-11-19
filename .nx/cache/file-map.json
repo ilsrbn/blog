@@ -1,0 +1,378 @@
+{
+  "version": "6.0",
+  "nxVersion": "17.1.2",
+  "deps": {
+    "@angular/animations": "^17.0.0",
+    "@angular/common": "^17.0.0",
+    "@angular/compiler": "^17.0.0",
+    "@angular/core": "^17.0.0",
+    "@angular/forms": "^17.0.0",
+    "@angular/platform-browser": "^17.0.0",
+    "@angular/platform-browser-dynamic": "^17.0.0",
+    "@angular/platform-server": "^17.0.0",
+    "@angular/router": "^17.0.0",
+    "@angular/ssr": "^17.0.1",
+    "express": "^4.18.2",
+    "pocketbase": "^0.19.0",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.14.2",
+    "@angular-devkit/build-angular": "^17.0.1",
+    "@angular-eslint/builder": "17.1.0",
+    "@angular-eslint/eslint-plugin": "17.1.0",
+    "@angular-eslint/eslint-plugin-template": "17.1.0",
+    "@angular-eslint/schematics": "17.1.0",
+    "@angular-eslint/template-parser": "17.1.0",
+    "@angular/cli": "^17.0.1",
+    "@angular/compiler-cli": "^17.0.0",
+    "@types/express": "^4.17.17",
+    "@types/jasmine": "~5.1.0",
+    "@types/node": "^18.18.0",
+    "@typescript-eslint/eslint-plugin": "6.11.0",
+    "@typescript-eslint/parser": "6.11.0",
+    "eslint": "^8.53.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "jasmine-core": "~5.1.0",
+    "karma": "~6.4.0",
+    "karma-chrome-launcher": "~3.2.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.1.0",
+    "ng-packagr": "^17.0.0",
+    "prettier": "^3.1.0",
+    "prettier-eslint": "^16.1.2",
+    "typescript": "~5.2.2"
+  },
+  "pathMappings": {
+    "api": [
+      "./dist/api"
+    ]
+  },
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "projectFileMap": {},
+    "nonProjectFiles": [
+      {
+        "file": ".editorconfig",
+        "hash": "6686520031028425313"
+      },
+      {
+        "file": ".eslintrc.json",
+        "hash": "1450226414395774286"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "13044518069027839699"
+      },
+      {
+        "file": ".vscode/extensions.json",
+        "hash": "5331566439708925252"
+      },
+      {
+        "file": ".vscode/launch.json",
+        "hash": "17038929134016848735"
+      },
+      {
+        "file": ".vscode/tasks.json",
+        "hash": "5336636969995539451"
+      },
+      {
+        "file": "README.md",
+        "hash": "5849453264201755204"
+      },
+      {
+        "file": "angular.json",
+        "hash": "8662830489314755957"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "5200886456805786479"
+      },
+      {
+        "file": "package.json",
+        "hash": "6587127751937526872"
+      },
+      {
+        "file": "projects/admin-dashboard/src/app/app.component.ts",
+        "hash": "12725251352028413067"
+      },
+      {
+        "file": "projects/admin-dashboard/src/app/app.config.ts",
+        "hash": "5890636227870873238"
+      },
+      {
+        "file": "projects/admin-dashboard/src/app/app.routes.ts",
+        "hash": "7023036532685277843"
+      },
+      {
+        "file": "projects/admin-dashboard/src/app/core/components/button/button.component.ts",
+        "hash": "11244265725870104558"
+      },
+      {
+        "file": "projects/admin-dashboard/src/app/core/components/button/button.style.scss",
+        "hash": "12406550928707892997"
+      },
+      {
+        "file": "projects/admin-dashboard/src/app/core/components/button/button.template.html",
+        "hash": "13473843337257294501"
+      },
+      {
+        "file": "projects/admin-dashboard/src/app/core/components/dashboard-toolbar/toolbar.component.ts",
+        "hash": "7569169056481503537"
+      },
+      {
+        "file": "projects/admin-dashboard/src/app/core/components/dashboard-toolbar/toolbar.style.scss",
+        "hash": "14941921103047996987"
+      },
+      {
+        "file": "projects/admin-dashboard/src/app/core/components/dashboard-toolbar/toolbar.template.html",
+        "hash": "13681533586823115200"
+      },
+      {
+        "file": "projects/admin-dashboard/src/app/core/components/grid/grid.component.ts",
+        "hash": "10109682988096082339"
+      },
+      {
+        "file": "projects/admin-dashboard/src/app/core/components/header/header.component.ts",
+        "hash": "9610750963593828421"
+      },
+      {
+        "file": "projects/admin-dashboard/src/app/core/components/header/header.styles.scss",
+        "hash": "7287689705814850974"
+      },
+      {
+        "file": "projects/admin-dashboard/src/app/core/components/header/header.template.html",
+        "hash": "4797664816636840326"
+      },
+      {
+        "file": "projects/admin-dashboard/src/app/core/components/input/input.component.ts",
+        "hash": "10173526224307520354"
+      },
+      {
+        "file": "projects/admin-dashboard/src/app/core/components/input/input.style.scss",
+        "hash": "14112081122845140465"
+      },
+      {
+        "file": "projects/admin-dashboard/src/app/core/components/input/input.template.html",
+        "hash": "351894271601744019"
+      },
+      {
+        "file": "projects/admin-dashboard/src/app/core/layout/admin.layout.ts",
+        "hash": "71963959637003337"
+      },
+      {
+        "file": "projects/admin-dashboard/src/app/core/layout/auth.layout.ts",
+        "hash": "10032392415123418022"
+      },
+      {
+        "file": "projects/admin-dashboard/src/app/core/theme.service.ts",
+        "hash": "15971197604692842611"
+      },
+      {
+        "file": "projects/admin-dashboard/src/app/pages/all/all-pages.route.ts",
+        "hash": "1391157898761361334"
+      },
+      {
+        "file": "projects/admin-dashboard/src/app/pages/create/create-page.route.ts",
+        "hash": "6412909898762463"
+      },
+      {
+        "file": "projects/admin-dashboard/src/app/pages/edit/edit-page.route.ts",
+        "hash": "16369033022085984968"
+      },
+      {
+        "file": "projects/admin-dashboard/src/app/pages/router.ts",
+        "hash": "12757808537832788458"
+      },
+      {
+        "file": "projects/admin-dashboard/src/app/posts/all/all-posts.route.ts",
+        "hash": "5765065822430587649"
+      },
+      {
+        "file": "projects/admin-dashboard/src/app/posts/all/all-posts.style.scss",
+        "hash": "1232433575190911166"
+      },
+      {
+        "file": "projects/admin-dashboard/src/app/posts/all/all-posts.template.html",
+        "hash": "722790164507119434"
+      },
+      {
+        "file": "projects/admin-dashboard/src/app/posts/create/create-post.route.ts",
+        "hash": "2812151522895978874"
+      },
+      {
+        "file": "projects/admin-dashboard/src/app/posts/edit/edit-post.route.ts",
+        "hash": "6086124832838172653"
+      },
+      {
+        "file": "projects/admin-dashboard/src/app/posts/router.ts",
+        "hash": "12882609262351876639"
+      },
+      {
+        "file": "projects/admin-dashboard/src/app/posts/service.ts",
+        "hash": "920932448115160810"
+      },
+      {
+        "file": "projects/admin-dashboard/src/app/posts/utils/card/post-card.component.ts",
+        "hash": "12516282476173464369"
+      },
+      {
+        "file": "projects/admin-dashboard/src/app/posts/utils/form/post-form.component.ts",
+        "hash": "265596903365001752"
+      },
+      {
+        "file": "projects/admin-dashboard/src/app/posts/utils/form/post-form.style.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "projects/admin-dashboard/src/app/posts/utils/form/post-form.template.html",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "projects/admin-dashboard/src/assets/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "projects/admin-dashboard/src/favicon.ico",
+        "hash": "3988961587069885523"
+      },
+      {
+        "file": "projects/admin-dashboard/src/index.html",
+        "hash": "7526607996766617594"
+      },
+      {
+        "file": "projects/admin-dashboard/src/main.ts",
+        "hash": "732663438483983849"
+      },
+      {
+        "file": "projects/admin-dashboard/src/styles.scss",
+        "hash": "11778691523432158080"
+      },
+      {
+        "file": "projects/admin-dashboard/tsconfig.app.json",
+        "hash": "14176067227322044330"
+      },
+      {
+        "file": "projects/admin-dashboard/tsconfig.spec.json",
+        "hash": "8046768446203215749"
+      },
+      {
+        "file": "projects/api/README.md",
+        "hash": "9790785312342403137"
+      },
+      {
+        "file": "projects/api/ng-package.json",
+        "hash": "13503026399166988766"
+      },
+      {
+        "file": "projects/api/package.json",
+        "hash": "16330344095724080906"
+      },
+      {
+        "file": "projects/api/src/lib/core/pocket-base.service.ts",
+        "hash": "10930742232182827180"
+      },
+      {
+        "file": "projects/api/src/lib/core/utils/make-file-url.ts",
+        "hash": "9530457650614356067"
+      },
+      {
+        "file": "projects/api/src/lib/post/index.ts",
+        "hash": "13916483646666590054"
+      },
+      {
+        "file": "projects/api/src/lib/post/post.api.ts",
+        "hash": "11065484006689172607"
+      },
+      {
+        "file": "projects/api/src/lib/post/post.interface.ts",
+        "hash": "12416884992447242048"
+      },
+      {
+        "file": "projects/api/src/public-api.ts",
+        "hash": "14030752604254348264"
+      },
+      {
+        "file": "projects/api/tsconfig.lib.json",
+        "hash": "12369024473565967613"
+      },
+      {
+        "file": "projects/api/tsconfig.lib.prod.json",
+        "hash": "1939170332703490951"
+      },
+      {
+        "file": "projects/api/tsconfig.spec.json",
+        "hash": "11730399207539946696"
+      },
+      {
+        "file": "projects/client-application/server.ts",
+        "hash": "7713808127824314998"
+      },
+      {
+        "file": "projects/client-application/src/app/app.component.html",
+        "hash": "6880513722212066549"
+      },
+      {
+        "file": "projects/client-application/src/app/app.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "projects/client-application/src/app/app.component.spec.ts",
+        "hash": "116759921675439542"
+      },
+      {
+        "file": "projects/client-application/src/app/app.component.ts",
+        "hash": "15686251956732250969"
+      },
+      {
+        "file": "projects/client-application/src/app/app.config.server.ts",
+        "hash": "14750464052796800194"
+      },
+      {
+        "file": "projects/client-application/src/app/app.config.ts",
+        "hash": "11821239874568871925"
+      },
+      {
+        "file": "projects/client-application/src/app/app.routes.ts",
+        "hash": "12397496131277534773"
+      },
+      {
+        "file": "projects/client-application/src/assets/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "projects/client-application/src/favicon.ico",
+        "hash": "3988961587069885523"
+      },
+      {
+        "file": "projects/client-application/src/index.html",
+        "hash": "2882345520410683446"
+      },
+      {
+        "file": "projects/client-application/src/main.server.ts",
+        "hash": "11653607448136507287"
+      },
+      {
+        "file": "projects/client-application/src/main.ts",
+        "hash": "4927504514031276065"
+      },
+      {
+        "file": "projects/client-application/src/styles.scss",
+        "hash": "5195668842064076916"
+      },
+      {
+        "file": "projects/client-application/tsconfig.app.json",
+        "hash": "18047083567304406802"
+      },
+      {
+        "file": "projects/client-application/tsconfig.spec.json",
+        "hash": "8046768446203215749"
+      },
+      {
+        "file": "tsconfig.json",
+        "hash": "14045142566696139003"
+      }
+    ]
+  }
+}

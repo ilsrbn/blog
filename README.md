@@ -6,8 +6,9 @@ Both apps were written with [Angular v17][angular-v17], within one workspace. Cl
 
 As backend service were chosen [PocketBase][pocketbase].
 
-# Project Structure (brief)
-```
+## Project Structure (brief)
+
+```bash
 📁 projects
 ├── 📁 admin-dashboard              # Application which stands for Admin interface
 │   └── 📁 src                      
@@ -31,12 +32,15 @@ As backend service were chosen [PocketBase][pocketbase].
 
 ```
 
-# Local development
-## Prerequesites
+## Local development
+
+### Prerequesites
+
 1. NodeJS Iron (20 LTS)
 2. PocketBase instance running locally on port 8090. [Guide](https://pocketbase.io/docs/)
 3. Angular CLI v17.
 
+### Commands to install and run locally
 
 ```bash
 git clone git@github.com:ilsrbn/blog.git
