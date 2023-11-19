@@ -8,6 +8,7 @@ a {
   justify-content: center;
   gap: var(--padding-small);
   font-size: var(--font-size-medium);
+  line-height: 1.5;
   padding: 0 var(--padding-medium);
   margin: 0;
   outline: none;
@@ -15,38 +16,38 @@ a {
   cursor: pointer;
   background: var(--color-bg);
 
-  transition: background 100ms ease-in;
+  transition: background var(--animation-default);
 
   &:hover {
     background: var(--color-semi-bg);
   }
   border: none;
-}
 
-.size {
-  &-sm {
+  &.size {
+    &-sm {
+    }
+    &-md {
+    }
+    &-lg {
+    }
   }
-  &-md {
-  }
-  &-lg {
-  }
-}
 
-.padding {
-  &-sm {
+  &.padding {
+    &-sm {
+    }
+    &-md {
+      padding: var(--padding-small) var(--padding-medium);
+    }
+    &-lg {
+    }
   }
-  &-md {
-    padding: var(--padding-small) var(--padding-medium);
-  }
-  &-lg {
-  }
-}
 
-.bordered {
-  border: 1px solid var(--color-primary);
-}
+  &.bordered {
+    border: 1px solid var(--color-primary);
+  }
 
-.active {
-  background: var(--color-semi-primary) !important;
-  color: var(--color-bg) !important;
+  &.active {
+    background: var(--color-semi-primary) !important;
+    color: var(--color-bg) !important;
+  }
 }

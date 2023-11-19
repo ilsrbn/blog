@@ -7,4 +7,10 @@ input {
   color: var(--color-primary);
   padding: 0 var(--padding-small);
   font-size: var(--font-size-medium);
+
+  transition: all var(--animation-default);
+
+  &:focus {
+    background: var(--color-semi-bg);
+  }
 }

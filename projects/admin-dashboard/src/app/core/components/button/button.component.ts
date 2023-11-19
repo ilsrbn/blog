@@ -14,13 +14,20 @@ type Tags = 'button' | 'a';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Button {
-  @Input() tag: Tags = 'button';
-  @Input() to?: string;
-  @Input({ required: true }) text!: string;
+  @Input() text?: string;
+  /** Material design icon name */
   @Input() iconName?: string;
   @Input() bordered?: boolean = true;
+
+  /** Navigation link */
+  @Input() to?: string;
+  /** Will Attach class `active` to `a` tag, when the route is active */
   @Input() routeable?: boolean = false;
 
+  /** Render as `button` or as `a` */
+  @Input() tag: Tags = 'button';
+
+  /** Sizing options */
   @Input() size: ButtonSizing = 'md';
   @Input() padding: ButtonSizing = 'md';
 

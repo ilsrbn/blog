@@ -8,6 +8,8 @@
         [bordered]="false"
       ></app-button>
     </div>
+
+    <!-- NAVIGATION ITEMS -->
     <ul class="nav__section-items">
       @for (navItem of navItems; track navItem.id) {
       <app-button
@@ -20,6 +22,8 @@
       ></app-button>
       }
     </ul>
+
+    <!-- ACTION ITEMS -->
     <ul class="nav__section-actions">
       @for (action of navActions; track action.id) {
       <app-button
@@ -27,6 +31,7 @@
         [text]="action.text"
         [iconName]="action.iconName"
         [bordered]="false"
+        (click)="action.click()"
       ></app-button>
       }
     </ul>

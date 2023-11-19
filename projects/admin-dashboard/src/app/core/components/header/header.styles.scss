@@ -32,7 +32,7 @@ nav {
   &-items,
   &-actions {
     display: flex;
-    align-items: center;
+    align-items: stretch;
 
     & > * {
       gap: var(--padding-medium);

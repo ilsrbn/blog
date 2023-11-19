@@ -4,7 +4,7 @@ This project is Monorepo to host Admin dashboard and Client side of my personal 
 
 Both apps were written with [Angular v17][angular-v17], within one workspace. Client side also will use SSR.
 
-As backend service were chosen [PocketBase](pocketbase).
+As backend service were chosen [PocketBase][pocketbase].
 
 # Project Structure (brief)
 ```

@@ -85,6 +85,8 @@ body {
   font-family: "Roboto Slab", serif;
   background-color: var(--color-bg);
   color: var(--color-primary);
+
+  transition: all var(--animation-default);
 }
 
 :root {
@@ -99,10 +101,10 @@ body {
   --font-size-medium: 24px;
   --font-size-large: 36px;
 
-  --color-primary: #1d1d02;
-  --color-semi-primary: #494930;
-  --color-neutral: #7a7a5e;
-  --color-semi-bg: #b0b090;
+  --color-primary: #181800;
+  --color-semi-primary: #444530;
+  --color-neutral: #77775e;
+  --color-semi-bg: #aeae90;
   --color-bg: #e8e8c6;
 
   --color-primary-25: rgba(var(--color-primary), 0.25);
@@ -112,11 +114,13 @@ body {
   --color-bg-25: rgba($color: var(--color-bg), $alpha: 0.25);
   --color-bg-50: rgba($color: var(--color-bg), $alpha: 0.5);
   --color-bg-75: rgba($color: var(--color-bg), $alpha: 0.75);
+
+  --animation-default: 100ms ease-in;
 }
 body.dark {
   --color-primary: #e8e8c6;
-  --color-semi-primary: #b0b090;
-  --color-neutral: #7a7a5e;
-  --color-semi-bg: #494930;
-  --color-bg: #1d1d02;
+  --color-semi-primary: #aeae90;
+  --color-neutral: #77775e;
+  --color-semi-bg: #444530;
+  --color-bg: #181800;
 }

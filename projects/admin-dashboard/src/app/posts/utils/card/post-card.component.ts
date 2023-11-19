@@ -49,7 +49,7 @@ import { RouterModule } from '@angular/router';
   
     background: var(--color-bg);
   
-    transition: background 100ms ease-in;
+    transition: background var(--animation-default);
   
     &:hover {
       background: var(--color-semi-bg);
