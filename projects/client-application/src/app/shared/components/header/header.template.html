@@ -1,0 +1,39 @@
+<nav>
+  <div class="nav__section">
+    <div class="nav__section-logo">
+      <!-- <app-button
+        tag="a"
+        to="/dashboard"
+        text="ilsrbn admin panel"
+        [bordered]="false"
+      ></app-button> -->
+    </div>
+
+    <!-- NAVIGATION ITEMS -->
+    <div class="nav__section-items">
+      <!-- @for (navItem of navItems; track navItem.id) {
+      <app-button
+        tag="a"
+        [to]="navItem.link"
+        [text]="navItem.text"
+        [iconName]="navItem.iconName"
+        [bordered]="false"
+        [routeable]="true"
+      ></app-button>
+      } -->
+    </div>
+
+    <!-- ACTION ITEMS -->
+    <div class="nav__section-actions">
+      @for (action of navActions; track action.id) {
+      <app-button
+        tag="button"
+        [text]="action.text"
+        [iconName]="action.iconName"
+        [bordered]="false"
+        (click)="action.click()"
+      ></app-button>
+      }
+    </div>
+  </div>
+</nav>

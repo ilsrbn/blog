@@ -1,2 +1,2 @@
-export * from './post.api'
-export * from './post.interface'
+export * from './post.api';
+export * from './post.interface';

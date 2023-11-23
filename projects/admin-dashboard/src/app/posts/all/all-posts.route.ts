@@ -1,12 +1,14 @@
+import { RouterModule } from '@angular/router';
 import { Component, inject } from '@angular/core';
-import { PostsService } from '../service';
 import { CommonModule } from '@angular/common';
+
 import { DashboardToolbar } from '../../core/components/dashboard-toolbar/toolbar.component';
 import { Button } from '../../core/components/button/button.component';
-import { RouterModule } from '@angular/router';
-import { PostCard } from '../utils/card/post-card.component';
 import { GridComponent } from '../../core/components/grid/grid.component';
 import { InputComponent } from '../../core/components/input/input.component';
+
+import { PostsService } from '../service';
+import { PostCard } from '../utils/card/post-card.component';
 
 @Component({
   standalone: true,

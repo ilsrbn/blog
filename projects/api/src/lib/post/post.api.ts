@@ -1,37 +1,28 @@
-import { Injectable } from '@angular/core';
-import { PocketbaseService } from '../core/pocket-base.service';
-import { ICreatePost, IPost } from './post.interface';
-import { makeFileUrl } from '../core/utils/make-file-url';
+import { Injectable, inject } from '@angular/core';
+import { IPost } from './post.interface';
+import { AbstractApi } from '../core/abstract-api.service';
+import { Paginated } from '../core/utils/paginated.type';
+import { Observable, map } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root',
 })
-export class PostApi {
-  constructor(private pbService: PocketbaseService) {}
+export class PostApi extends AbstractApi {
+  protected override http: HttpClient = inject(HttpClient);
+  protected override apiUrl: string =
+    AbstractApi.BASE_URL + '/api/collections/posts/records';
 
-  async getPosts(page: number = 1, perPage: number = 15) {
-    const response = await this.pbService
-      .collection('posts')
-      .getList<IPost>(page, perPage);
-    response.items = response.items.map((post) => {
-      const { collectionId, id, preview } = post;
-
-      return {
-        ...post,
-        preview: makeFileUrl(collectionId, id, preview),
-      };
-    });
-
-    return response;
+  getPosts(
+    page: number = 1,
+    perPage: number = 15,
+  ): Observable<Paginated<IPost>> {
+    return this.http.get<Paginated<IPost>>(
+      this.apiUrl + this.makeQueryParams({ page, perPage }),
+    );
   }
 
-  createPost(payload: ICreatePost) {
-    const formData = new FormData();
-
-    for (const key in payload) {
-      formData.append(key, (payload as any)[key]);
-    }
-
-    return this.pbService.collection('posts').create<IPost>(formData);
+  getPostById(postId: string) {
+    return this.http.get<IPost>(this.apiUrl + `/${postId}`);
   }
 }

@@ -4,6 +4,8 @@ import {
   Component,
   EventEmitter,
   Input,
+  OnDestroy,
+  OnInit,
   Output,
 } from '@angular/core';
 import {
@@ -12,17 +14,20 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
-import { ICreatePost } from '../../../../../../api/src/public-api';
+import { ICreatePost } from 'api';
+import { Button } from '../../../core/components/button/button.component';
+import { InputComponent } from '../../../core/components/input/input.component';
+import { tap } from 'rxjs';
 
 @Component({
   standalone: true,
   selector: 'post-form',
   templateUrl: './post-form.template.html',
   styleUrl: './post-form.style.scss',
-  imports: [ReactiveFormsModule, CommonModule],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [ReactiveFormsModule, CommonModule, Button, InputComponent],
+  // changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class PostForm {
+export class PostForm implements OnInit, OnDestroy {
   @Input() title?: string = '';
   @Input() description?: string = '';
   @Input() briefDescription?: string = '';
@@ -30,18 +35,10 @@ export class PostForm {
   @Input() status?: 'draft' | 'published' = 'draft';
   @Input() slug?: string = '';
 
-  @Output() eventEmiter: EventEmitter<ICreatePost> = new EventEmitter();
+  @Output() onSubmit: EventEmitter<ICreatePost> = new EventEmitter();
 
-  formGroup = new FormGroup({
-    title: new FormControl('', Validators.required),
-    description: new FormControl('', Validators.required),
-    briefDescription: new FormControl('', Validators.required),
-    status: new FormControl('draft', Validators.required),
-    image: new FormControl(),
-    slug: new FormControl('', Validators.required),
-  });
-
-  submit() {
+  public submit(event: any) {
+    event.preventDefault();
     const formValue = this.formGroup.getRawValue();
     const payload: ICreatePost = {
       title: formValue.title || '',
@@ -49,8 +46,43 @@ export class PostForm {
       content_preview: formValue.briefDescription || '',
       preview: formValue.image,
       slug: formValue.slug || '',
-      status: formValue.slug || ('draft' as any),
+      status: formValue.status || ('draft' as any),
     };
-    this.eventEmiter.emit(payload);
+    this.onSubmit.emit(payload);
+  }
+
+  ngOnInit(): void {
+    this.formGroup.patchValue({
+      title: this.title,
+    });
+  }
+
+  public formGroup = new FormGroup({
+    title: new FormControl(this.title, Validators.required),
+    description: new FormControl('', Validators.required),
+    briefDescription: new FormControl('', Validators.required),
+    status: new FormControl('draft', Validators.required),
+    image: new FormControl(),
+    slug: new FormControl('', Validators.required),
+  });
+
+  public imageUrl: 'https://placehold.co/800x400?text=18x9' | string =
+    'https://placehold.co/800x400?text=18x9';
+
+  private imageSubscription$ = this.formGroup
+    .get('image')
+    ?.valueChanges.pipe(
+      tap((value) => {
+        if (value) {
+          this.imageUrl = URL.createObjectURL(value);
+        } else {
+          this.imageUrl = 'https://placehold.co/800x400?text=18x9';
+        }
+      }),
+    )
+    .subscribe();
+
+  ngOnDestroy(): void {
+    this.imageSubscription$?.unsubscribe();
   }
 }

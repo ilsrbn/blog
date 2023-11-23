@@ -1,0 +1,21 @@
+@if (tag === 'button') {
+<button [class]="classes">
+  @if (iconName) {
+  <span class="material-symbols-sharp"> {{ iconName }} </span>
+  } @if (text) {
+  <span> {{ text }} </span>
+  }
+</button>
+} @else if (tag === 'a') {
+<a
+  [class]="classes"
+  [routerLink]="to"
+  [routerLinkActive]="routeable ? 'active' : ''"
+>
+  @if (iconName) {
+  <span class="material-symbols-sharp"> {{ iconName }} </span>
+  } @if (text) {
+  <span> {{ text }} </span>
+  }
+</a>
+}

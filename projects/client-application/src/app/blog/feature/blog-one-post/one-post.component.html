@@ -1,0 +1,27 @@
+@if (post$ | async; as post) {
+  <div
+    class="base-container border-top border-bottom border-left border-right"
+    style="padding: unset"
+  >
+    <blog-post-heading
+      [title]="post.title"
+      [postedAt]="post.created"
+    ></blog-post-heading>
+    <div
+      class="border-top"
+      [innerHTML]="post.content_preview"
+      style="padding: var(--padding-medium)"
+    ></div>
+    <img
+      class="border-block"
+      style="max-width: 100%; object-fit: cover"
+      [src]="post.preview | imageLink: post.collectionId : post.id"
+      [alt]="post.title"
+    />
+    <div
+      class="post-content"
+      style="padding: 0 var(--padding-medium)"
+      [innerHTML]="post.content | disableSanitize"
+    ></div>
+  </div>
+}

@@ -1,0 +1,37 @@
+<form [formGroup]="formGroup" (ngSubmit)="submit($event)">
+  <app-input
+    [id]="'title'"
+    placeholder="Post title"
+    formControlName="title"
+  ></app-input>
+  <div class="imageCover__container">
+    <img [src]="imageUrl" alt="" />
+    <app-input
+      class="imageCover__fileUpload"
+      type="file"
+      [id]="'fileUpload'"
+      placeholder="Post cover image"
+      formControlName="image"
+    ></app-input>
+  </div>
+
+  <app-input
+    [id]="'preview-description'"
+    placeholder="Post short description"
+    formControlName="briefDescription"
+  ></app-input>
+
+  <app-input
+    [id]="'content'"
+    placeholder="Post content"
+    formControlName="description"
+  ></app-input>
+
+  <app-input
+    [id]="'slug'"
+    placeholder="Post slug"
+    formControlName="slug"
+  ></app-input>
+
+  <app-button [fullWidth]="true" type="submit" text="Submit"></app-button>
+</form>

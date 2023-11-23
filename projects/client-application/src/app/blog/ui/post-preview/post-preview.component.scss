@@ -1,0 +1,40 @@
+.post-preview-card {
+  // padding: var(--padding-small);
+
+  display: flex;
+
+  flex-direction: column;
+
+  height: 100%;
+
+  & > *:last-child {
+    margin-top: auto;
+  }
+
+  background: var(--color-bg);
+
+  transition: background var(--animation-fast);
+
+  &:hover {
+    background: var(--color-semi-bg);
+  }
+}
+h2 {
+  padding-inline: var(--padding-small);
+}
+
+footer {
+  display: flex;
+  .post-text {
+    flex: 1 1 75%;
+    padding: var(--padding-small);
+  }
+
+  i {
+    font-size: 0.8em;
+    flex: 0 0 25%;
+    padding: var(--padding-small);
+    margin: 0;
+    text-align: right;
+  }
+}

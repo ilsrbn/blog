@@ -1,6 +1,23 @@
+@if (type === 'text') {
 <input
-  type="text"
+  [ngClass]="classes"
+  [type]="type"
+  [id]="id"
   [value]="value"
   [placeholder]="placeholder"
   (keyup)="writeValue($event)"
 />
+} @else if (type === 'file') {
+<label [for]="id" [ngClass]="classes">
+  <span class="material-symbols-sharp"> upload_file </span>
+  Upload image
+  <input
+    [type]="type"
+    [id]="id"
+    [placeholder]="placeholder"
+    (change)="writeValue($event)"
+    style="display: none"
+    accept="image/webp, image/png"
+  />
+</label>
+}

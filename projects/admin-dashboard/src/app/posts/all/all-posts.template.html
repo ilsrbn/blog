@@ -1,6 +1,10 @@
 <dashboard-toolbar>
   <div class="toolbar__items">
-    <app-input class="toolbar__items-search" placeholder="Search..." />
+    <app-input
+      [id]="'posts-search'"
+      class="toolbar__items-search"
+      placeholder="Search..."
+    />
     <app-button
       tag="a"
       to="/dashboard/posts/create"
@@ -16,7 +20,7 @@
   <post-card
     [title]="post.title"
     [description]="post.content_preview"
-    [slug]="post.slug"
+    [id]="post.id"
     [date]="post.created"
     [image]="post.preview"
     [status]="post.status"
@@ -25,7 +29,7 @@
   <post-card
     [title]="post.title"
     [description]="post.content_preview"
-    [slug]="post.slug"
+    [id]="post.id"
     [date]="post.created"
     [image]="post.preview"
     [status]="post.status"
@@ -34,7 +38,7 @@
   <post-card
     [title]="post.title"
     [description]="post.content_preview"
-    [slug]="post.slug"
+    [id]="post.id"
     [date]="post.created"
     [image]="post.preview"
     [status]="post.status"
@@ -43,7 +47,7 @@
   <post-card
     [title]="post.title"
     [description]="post.content_preview"
-    [slug]="post.slug"
+    [id]="post.id"
     [date]="post.created"
     [image]="post.preview"
     [status]="post.status"
@@ -52,7 +56,7 @@
   <post-card
     [title]="post.title"
     [description]="post.content_preview"
-    [slug]="post.slug"
+    [id]="post.id"
     [date]="post.created"
     [image]="post.preview"
     [status]="post.status"
@@ -61,7 +65,7 @@
   <post-card
     [title]="post.title"
     [description]="post.content_preview"
-    [slug]="post.slug"
+    [id]="post.id"
     [date]="post.created"
     [image]="post.preview"
     [status]="post.status"
@@ -70,7 +74,7 @@
   <post-card
     [title]="post.title"
     [description]="post.content_preview"
-    [slug]="post.slug"
+    [id]="post.id"
     [date]="post.created"
     [image]="post.preview"
     [status]="post.status"
@@ -79,7 +83,7 @@
   <post-card
     [title]="post.title"
     [description]="post.content_preview"
-    [slug]="post.slug"
+    [id]="post.id"
     [date]="post.created"
     [image]="post.preview"
     [status]="post.status"
@@ -88,7 +92,7 @@
   <post-card
     [title]="post.title"
     [description]="post.content_preview"
-    [slug]="post.slug"
+    [id]="post.id"
     [date]="post.created"
     [image]="post.preview"
     [status]="post.status"

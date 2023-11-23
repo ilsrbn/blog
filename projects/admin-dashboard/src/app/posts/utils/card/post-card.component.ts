@@ -59,7 +59,7 @@ import { RouterModule } from '@angular/router';
   imports: [RouterModule, CommonModule],
 })
 export class PostCard {
-  @Input({ required: true }) slug!: string;
+  @Input({ required: true }) id!: string;
   @Input({ required: true }) title!: string;
   @Input({ required: true }) description!: string;
   @Input({ required: true }) date!: string;
@@ -69,6 +69,6 @@ export class PostCard {
   @Input({ required: true }) domain!: string;
 
   get link() {
-    return `/dashboard/${this.domain}/${this.slug}`;
+    return `/dashboard/${this.domain}/${this.id}`;
   }
 }

@@ -50,4 +50,8 @@ a {
     background: var(--color-semi-primary) !important;
     color: var(--color-bg) !important;
   }
+
+  &.full-width {
+    width: 100%;
+  }
 }

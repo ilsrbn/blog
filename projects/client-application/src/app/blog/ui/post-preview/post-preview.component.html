@@ -1,0 +1,15 @@
+<a class="post-preview-card border-all" [routerLink]="link">
+  <h2>
+    {{ title }}
+  </h2>
+  <img
+    class="border-block"
+    style="max-width: 100%; width: 100%; aspect-ratio: 2/1; object-fit: cover"
+    [src]="image | imageLink: collectionId : id"
+    [alt]="title"
+  />
+  <footer>
+    <div class="post-text" [innerHTML]="briefDescription"></div>
+    <i>{{ postedAt | date }}</i>
+  </footer>
+</a>

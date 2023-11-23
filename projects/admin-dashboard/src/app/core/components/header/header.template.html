@@ -10,7 +10,7 @@
     </div>
 
     <!-- NAVIGATION ITEMS -->
-    <ul class="nav__section-items">
+    <div class="nav__section-items">
       @for (navItem of navItems; track navItem.id) {
       <app-button
         tag="a"
@@ -21,10 +21,10 @@
         [routeable]="true"
       ></app-button>
       }
-    </ul>
+    </div>
 
     <!-- ACTION ITEMS -->
-    <ul class="nav__section-actions">
+    <div class="nav__section-actions">
       @for (action of navActions; track action.id) {
       <app-button
         tag="button"
@@ -34,6 +34,6 @@
         (click)="action.click()"
       ></app-button>
       }
-    </ul>
+    </div>
   </div>
 </nav>

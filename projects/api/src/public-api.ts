@@ -1,5 +1,5 @@
 /*
- * Public API Surface of api
+ * Public api Surface of api
  */
 
 export * from './lib/post';

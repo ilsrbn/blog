@@ -1,0 +1,17 @@
+<header class="blog-post-header" style="padding: 0 var(--padding-medium)">
+  <div class="header-item">
+    <app-button
+      tag="a"
+      [routerLink]="goBackUrl"
+      iconName="arrow_back"
+    ></app-button>
+  </div>
+  <div class="header-item">
+    <h1 style="text-align: center; margin: 0">{{ title }}</h1>
+  </div>
+  <div class="header-item">
+    <i style="text-align: right; width: 100%; display: block">{{
+      postedAt | date
+    }}</i>
+  </div>
+</header>

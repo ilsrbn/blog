@@ -1,11 +1,11 @@
-# Api
+# api
 
 This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.0.
 
 ## Code scaffolding
 
 Run `ng generate component component-name --project api` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project api`.
-> Note: Don't forget to add `--project api` or else it will be added to the default project in your `angular.json` file. 
+> Note: Don't forget to add `--project api` or else it will be added to the default project in your `angular.json` file.
 
 ## Build
 

@@ -1,0 +1,10 @@
+.posts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--padding-small);
+  padding-block: var(--padding-small);
+
+  @media screen and (max-width: 980px) {
+    grid-template-columns: 1fr;
+  }
+}

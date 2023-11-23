@@ -1,0 +1,31 @@
+form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--padding-small);
+
+  & > * {
+    border-bottom: 1px solid var(--color-primary);
+    border-top: 1px solid var(--color-primary);
+  }
+}
+
+.imageCover__container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 18/9;
+  img {
+    object-fit: cover;
+    width: 100%;
+    aspect-ratio: 18/9;
+    max-height: 100%;
+    border: 1px solid var(--color-primary);
+  }
+  .imageCover__fileUpload {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+  }
+}
